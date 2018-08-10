@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/joke/joke",
+    "pages/enter/enter",
+    "pages/gossip/gossip",
+    "pages/picture/picture",
+    "pages/detail/detail",
+    "pages/exit/exit"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "内涵段子",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#ffffff",
+    "selectedColor": "#268dcd",
+    "borderStyle": "black",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/joke/joke",
+        "text": "搞笑段子"
+      },
+      {
+        "pagePath": "pages/gossip/gossip",
+        "text": "娱乐八卦"
+      },
+      {
+        "pagePath": "pages/picture/picture",
+        "text": "美图放送"
+      }
+    ],
+    "position": "top"
+  }
+}
