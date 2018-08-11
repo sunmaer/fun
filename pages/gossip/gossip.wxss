@@ -1,1 +1,14 @@
 /* pages/gossip/gossip.wxss */
+
+.mod_gossip {
+  box-sizing: border-box;
+  color: #222;
+}
+
+.gossip_item {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  height: 90px;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.6);
+}

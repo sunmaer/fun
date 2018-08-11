@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/joke/joke",
     "pages/enter/enter",
     "pages/gossip/gossip",
@@ -14,24 +15,23 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "color": "#ffffff",
-    "selectedColor": "#268dcd",
+    "color": "#000000",
+    "selectedColor": "#1aad19",
     "borderStyle": "black",
-    "backgroundColor": "#000000",
+    "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/joke/joke",
-        "text": "搞笑段子"
+        "pagePath": "pages/index/index",
+        "text": "首页"
       },
       {
-        "pagePath": "pages/gossip/gossip",
-        "text": "娱乐八卦"
+        "pagePath": "pages/exit/exit",
+        "text": "我要上传"
       },
       {
         "pagePath": "pages/picture/picture",
-        "text": "美图放送"
+        "text": "个人中心"
       }
-    ],
-    "position": "top"
+    ]
   }
 }
