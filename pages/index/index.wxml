@@ -1,6 +1,6 @@
-<import src="../joke/joke.wxml"/>
-<import src="../gossip/gossip.wxml"/>
-<import src="../picture/picture.wxml"/>
+<import src="../../comps/joke/joke.wxml"/>
+<import src="../../comps/gossip/gossip.wxml"/>
+<import src="../../comps/picture/picture.wxml"/>
 
 <view class="page">
     <view class="page__bd">

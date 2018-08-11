@@ -1,0 +1,47 @@
+<!--pages/picture/picture.wxml-->
+<template name="picture">
+  <scroll-view class="mod_picture">
+    <view class="picture_item">
+      <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
+      <view class="tit">
+        周冬雨周冬雨
+      </view>
+    </view>
+    <view class="picture_item">
+      <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
+      <view class="tit">
+        周冬雨周冬雨
+      </view>
+    </view>
+    <view class="picture_item">
+      <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
+      <view class="tit">
+        周冬雨周冬雨
+      </view>
+    </view>
+    <view class="picture_item">
+      <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
+      <view class="tit">
+        周冬雨周冬雨
+      </view>
+    </view>
+    <view class="picture_item">
+      <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
+      <view class="tit">
+        周冬雨周冬雨
+      </view>
+    </view>
+    <view class="picture_item">
+      <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
+      <view class="tit">
+        周冬雨周冬雨
+      </view>
+    </view>
+    <view class="picture_item">
+      <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
+      <view class="tit">
+        周冬雨周冬雨
+      </view>
+    </view>
+  </scroll-view>
+</template>

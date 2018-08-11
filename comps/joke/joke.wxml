@@ -1,7 +1,7 @@
 <!--pages/joke/joke.wxml-->
 <template name="joke">
   <scroll-view class="mod_joke">
-    <view class="joke_item">
+    <view class="joke_item" bindtap='detail'>
       <view class="item_content">
         <text class="title">好笑的笑话哈哈哈哈哈哈哈哈哈哈啊哈哈</text>
         <text class="content">高中时班主任姓黄，我们背地里叫他大黄。元旦时班里玩你比我猜，比赛到了白热化的阶段，最后一题是“藏獒”。 甲组的同学做了一个狗的姿势，最后一名同学高兴的指着班主任大喊：我知道了，我知道了，是大黄，是大黄……</text>

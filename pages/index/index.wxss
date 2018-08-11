@@ -1,7 +1,7 @@
 /* index.wxss */
-@import '../joke/joke.wxss';
-@import '../gossip/gossip.wxss';
-@import '../picture/picture.wxss';
+@import '../../comps/joke/joke.wxss';
+@import '../../comps/gossip/gossip.wxss';
+@import '../../comps/picture/picture.wxss';
 
 page, .page, .page__bd {
   height: 100%;

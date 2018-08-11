@@ -1,18 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/joke/joke",
     "pages/enter/enter",
-    "pages/gossip/gossip",
-    "pages/picture/picture",
     "pages/detail/detail",
     "pages/exit/exit"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "内涵段子",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#000000",
@@ -29,7 +26,7 @@
         "text": "我要上传"
       },
       {
-        "pagePath": "pages/picture/picture",
+        "pagePath": "pages/exit/exit",
         "text": "个人中心"
       }
     ]

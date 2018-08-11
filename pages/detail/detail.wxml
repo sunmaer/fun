@@ -1,2 +1,81 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class="mod_detail">
+  <view class="detail_title">
+    一个好笑的笑话
+  </view>
+  <view class="detail_author">
+    <image class="avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0"></image>
+    <view class="author_info">
+      <text class="nick">安和桥北</text>
+      <text class="time">2018-08-09 12:30</text>
+    </view>
+  </view>
+  <view class="detail_content">
+    儿子拿着一张破纸，对我说:“爸爸，我有一张藏宝图，我送给你，你给我10块钱好吗？”我拿过来一看，说道:“你这不就是画的咱家吗，怎么就叫藏宝图了，还给我要10块钱。”儿子:“爸爸，你看看用红笔画的地方.”我仔细一看，沙发底下，桌子腿底下……我靠，这逼崽子，这可是老子藏私房钱的地方，我赶紧跟儿子说：“那啥，宝贝儿，我给你50块！”
+  </view>
+  <view class="detail_comment">
+    <view class="comment_title">热门评论</view>
+    <view class="comment_input">
+      <image class="avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0"></image>
+      <input class="input" placeholder='写评论'></input>
+    </view>
+    <view class="comment_list">
+      <view class="item">
+        <image class="avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0"></image>
+        <view class="item_content">
+          <text class="username">董小姐</text>
+          <text>董小姐，你嘴角向下的时候很美，就像安河桥下清澈的水。</text>
+          <text class="date">2018-08-09 12:30</text>
+        </view>
+      </view>
+      <view class="item">
+        <image class="avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0"></image>
+        <view class="item_content">
+          <text class="username">董小姐</text>
+          <text>董小姐，你嘴角向下的时候很美，就像安河桥下清澈的水。</text>
+          <text class="date">2018-08-09 12:30</text>
+        </view>
+      </view>
+      <view class="item">
+        <image class="avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0"></image>
+        <view class="item_content">
+          <text class="username">董小姐</text>
+          <text>董小姐，你嘴角向下的时候很美，就像安河桥下清澈的水。</text>
+          <text class="date">2018-08-09 12:30</text>
+        </view>
+      </view>
+      <view class="item">
+        <image class="avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0"></image>
+        <view class="item_content">
+          <text class="username">董小姐</text>
+          <text>董小姐，你嘴角向下的时候很美，就像安河桥下清澈的水。</text>
+          <text class="date">2018-08-09 12:30</text>
+        </view>
+      </view>
+      <view class="item">
+        <image class="avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0"></image>
+        <view class="item_content">
+          <text class="username">董小姐</text>
+          <text>董小姐，你嘴角向下的时候很美，就像安河桥下清澈的水。</text>
+          <text class="date">2018-08-09 12:30</text>
+        </view>
+      </view>
+      <view class="item">
+        <image class="avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0"></image>
+        <view class="item_content">
+          <text class="username">董小姐</text>
+          <text>董小姐，你嘴角向下的时候很美，就像安河桥下清澈的水。</text>
+          <text class="date">2018-08-09 12:30</text>
+        </view>
+      </view>
+      <view class="item">
+        <image class="avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0"></image>
+        <view class="item_content">
+          <text class="username">董小姐</text>
+          <text>董小姐，你嘴角向下的时候很美，就像安河桥下清澈的水。</text>
+          <text class="date">2018-08-09 12:30</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

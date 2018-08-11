@@ -18,6 +18,11 @@ Page({
       }
     });
   },
+  detail() {
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+    })
+  },
   tabClick: function (e) {
     this.setData({
       sliderOffset: e.currentTarget.offsetLeft,

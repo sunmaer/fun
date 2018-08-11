@@ -1,1 +1,99 @@
 /* pages/detail/detail.wxss */
+
+.mod_detail {
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+
+.detail_title {
+  margin: 0 0 10px 0;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.detail_author {
+  display: flex;
+}
+
+.avatar {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.author_info {
+  flex: 1 1 auto;
+  padding-left: 10px;
+  line-height: 24px;
+  font-size: 12px;
+}
+
+.nick {
+  margin-right: 5px;
+  color: #999;
+}
+
+.time {
+  color: #999;
+}
+
+.detail_content {
+  margin: 10px 0;
+  font-size: 15px;
+  text-align: justify;
+}
+
+.detail_comment {
+
+}
+
+.comment_title {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+}
+
+.comment_input {
+  display: flex;
+}
+
+.input {
+  flex: 1 1 auto;
+  padding: 0 8px;
+  margin-left: 10px;
+  width: calc(100% - 34px);
+  border: 1px solid #999;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.comment_list {
+  margin-top: 10px;
+}
+
+.item {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.item_content {
+  margin-left: 10px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 34px);
+}
+
+.username {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color:cadetblue;
+}
+
+.date {
+  line-height: 25px;
+  font-size: 13px;
+  color: #999;
+}
