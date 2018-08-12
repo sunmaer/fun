@@ -1,1 +1,13 @@
 /* pages/exit/exit.wxss */
+
+.mod_edit {
+  margin: 30px 15px 0 15px;
+}
+
+.title, .content {
+  font-size: 15px;
+}
+
+.weui-btn {
+  background-color: #65c294 !important;
+}

@@ -1,6 +1,7 @@
 /* pages/picture/picture.wxss */
 
 .mod_picture {
+  position: relative;
   margin: 10px 0 50px 0;
 }
 
@@ -35,4 +36,23 @@
   color: #fff;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mod_swiper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.swiper_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 80%;
 }
