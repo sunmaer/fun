@@ -89,7 +89,7 @@
 .username {
   margin-bottom: 5px;
   font-size: 13px;
-  color:cadetblue;
+  color:#65c294;
 }
 
 .date {

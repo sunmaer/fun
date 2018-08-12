@@ -1,4 +1,4 @@
-// pages/enter/enter.js
+// page/self/self.js
 Page({
 
   /**

@@ -1,0 +1,4 @@
+<!--pages/hello/hello.wxml-->
+<view class="mod_hello">
+  <text class="slogan">不负好笑话</text>
+</view>

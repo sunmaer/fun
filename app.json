@@ -1,19 +1,20 @@
 {
   "pages": [
+    "pages/hello/hello",
     "pages/index/index",
-    "pages/enter/enter",
     "pages/detail/detail",
-    "pages/exit/exit"
+    "pages/edit/edit",
+    "pages/self/self"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "内涵段子",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#65c294",
+    "navigationBarTitleText": "开心一刻",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#000000",
-    "selectedColor": "#1aad19",
+    "selectedColor": "#65c294",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
@@ -22,11 +23,11 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/exit/exit",
-        "text": "我要上传"
+        "pagePath": "pages/edit/edit",
+        "text": "讲笑话"
       },
       {
-        "pagePath": "pages/exit/exit",
+        "pagePath": "pages/self/self",
         "text": "个人中心"
       }
     ]
