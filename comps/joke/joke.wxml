@@ -1,5 +1,5 @@
 <!--pages/joke/joke.wxml-->
-<scroll-view class="mod_joke">
+<scroll-view class="mod_joke" scroll-y="true" lower-threshold="100" bindscrolltolower="loadMore">
   <view 
     class="joke_item" 
     wx:for="{{ jokeList }}"

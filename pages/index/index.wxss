@@ -3,7 +3,7 @@
 @import '../../comps/gossip/gossip.wxss';
 @import '../../comps/picture/picture.wxss';
 
-page, .page, .page__bd {
+page, .page, .page__bd, .weui-tab, .weui-tab__panel, .weui-tab__content {
   height: 100%;
   overflow: hidden;
 }
@@ -28,9 +28,4 @@ page, .page, .page__bd {
 .weui-tab__panel {
   margin-top: 50px;
   padding-top: 0;
-  height: 100%;
-}
-
-.weui-tab__content {
-  padding: 0 14px;
 }

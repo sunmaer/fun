@@ -2,7 +2,7 @@ var sliderWidth = 110; // 需要设置slider的宽度，用于计算中间位置
 
 Page({
   data: {
-    tabs: ["搞笑段子", "娱乐八卦", "美图放送"],
+    tabs: ["搞笑段子", "趣味动图", "表情包"],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0
@@ -17,20 +17,6 @@ Page({
         })
       }
     })
-    // 请求数据
-    // wx.request({
-    //   url: 'http://www.gamemonkey.cn/joke_feeds_interface.php',
-    //   data: {},
-    //   header: {
-    //     'content-type': 'application/json' // 默认值
-    //   },
-    //   success: function (res) {
-    //     console.log(res.data)
-    //   },
-    //   fail: function (error) {
-    //     console.log('请求失败：' + error)
-    //   }
-    // })
   },
   tabClick: function (e) {
     this.setData({
@@ -48,8 +34,5 @@ Page({
       path: 'https://v.qq.com',
       imageUrl: 'http://www.fengdu100.com/uploads/allimg/180611/1R4394462-3.jpg'
     }
-  },
-  onReachBottom () {
-    console.log('到底啦')
   }
 })

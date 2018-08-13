@@ -44,9 +44,7 @@ Page({
   about () {
     wx.showModal({
       title: '开心一刻',
-      content: `系统版本：1.0
-                说明：用心创造快乐
-                开发人员：唯一C位小组全体成员`,
+      content: '系统版本：1.0\r\n说明：用心创造快乐\r\n开发人员：唯一C位小组',
       showCancel: false,
       success: function (res) {}
     })

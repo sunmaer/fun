@@ -1,39 +1,57 @@
+const ajax = require('../../utils/util.js').ajax
+
 Component({
   properties: {},
   data: {
-    jokeList: []
+    jokeList: [],
+    pageNum: 1,
+    isAll: false
   },
   ready () {
-    let _this = this
-    // 请求数据
-    wx.request({
-      url: 'http://www.gamemonkey.cn/joke_feeds_interface.php',
-      data: {
-        type: 3,
-        pageNum: 1
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        if(res && res.data && res.data.code === "200") {
-          _this.setData({
-            jokeList: res.data.data
-          })
-        }
-      },
-      fail: function (error) {
-        wx.showToast({
-          title: '接口请求失败' + 'error',
-          icon: 'none'
-        })
-      }
+    ajax('http://www.gamemonkey.cn/joke_feeds_interface.php', {
+      type: 3,
+      pageNum: this.data.pageNum
+    }).then((res) => {
+      this.setData({
+        jokeList: res
+      })
+    }).catch((error) => {
+      wx.showToast({
+        title: '接口请求失败：' + 'error',
+        icon: 'none'
+      })
     })
   },
   methods: {
     detail() {
       wx.navigateTo({
         url: '/pages/detail/detail',
+      })
+    },
+    // 上拉加载数据
+    loadMore () {
+      if(this.data.isAll) return
+      this.setData({
+        pageNum: this.data.pageNum + 1
+      })
+      ajax('http://www.gamemonkey.cn/joke_feeds_interface.php', {
+        type: 3, 
+        pageNum: this.data.pageNum
+      }).then((res) => {
+        if(this.data.jokeList.length === res.length) { // 没有更多数据
+          this.setData({
+            isAll: true
+          })
+          return
+        }
+        this.setData({
+          jokeList: res
+        })
+      }).catch((error) => {
+        wx.showToast({
+          title: '接口请求失败：' + 'error',
+          icon: 'none'
+        })
       })
     }
   }

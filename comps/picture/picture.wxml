@@ -1,52 +1,19 @@
 <!--pages/picture/picture.wxml-->
-<scroll-view class="mod_picture">
-  <view class="picture_item" bindtap='show'>
-    <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
-    <view class="tit">
-      周冬雨周冬雨
-    </view>
-  </view>
-  <view class="picture_item">
-    <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
-    <view class="tit">
-      周冬雨周冬雨
-    </view>
-  </view>
-  <view class="picture_item">
-    <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
-    <view class="tit">
-      周冬雨周冬雨
-    </view>
-  </view>
-  <view class="picture_item">
-    <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
-    <view class="tit">
-      周冬雨周冬雨
-    </view>
-  </view>
-  <view class="picture_item">
-    <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
-    <view class="tit">
-      周冬雨周冬雨
-    </view>
-  </view>
-  <view class="picture_item">
-    <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
-    <view class="tit">
-      周冬雨周冬雨
-    </view>
-  </view>
-  <view class="picture_item">
-    <image class="pic" mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
-    <view class="tit">
-      周冬雨周冬雨
-    </view>
+<scroll-view class="mod_picture" scroll-y="true" lower-threshold="100" bindscrolltolower="loadMore">
+  <view
+    wx:for="{{ picList }}"
+    wx:key="{{ item.id }}"
+    class="picture_item"
+    data-url="{{ item.content }}"
+    bindtap='show'>
+    <image class="pic" mode="widthFix" src="{{ item.content }}"></image>
+    <view class="tit">{{ item.title }}</view>
   </view>
 </scroll-view>
 <view class="mod_swiper" wx:if="{{ show }}" bindtap='hide'>
   <swiper style="width: 100%; height: 100%;">
     <swiper-item class="swiper_item">
-      <image mode="widthFix" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg" class="image" />
+      <image mode="widthFix" src="{{ curPic }}" class="image" />
     </swiper-item>
   </swiper>
 </view>

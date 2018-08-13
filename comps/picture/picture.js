@@ -1,3 +1,5 @@
+const ajax = require('../../utils/util.js').ajax
+
 Component({
   properties: {
 
@@ -5,43 +7,63 @@ Component({
 
   data: {
     show: false,
-    picList: []
+    curPic: 'www.fengdu100.com/uploads/allimg/180611/1R4394462-3.jpg',
+    picList: [],
+    pageNum: 1,
+    isAll: false
   },
 
   ready() {
-    let _this = this
-    // 请求数据
-    wx.request({
-      url: 'http://www.gamemonkey.cn/joke_feeds_interface.php?type=3',
-      data: {},
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        if (res && res.data && res.data.code === "200") {
-          _this.setData({
-            picList: res.data.data
-          })
-        }
-      },
-      fail: function (error) {
-        wx.showToast({
-          title: '接口请求失败' + 'error',
-          icon: 'none'
-        })
-      }
+    ajax('http://www.gamemonkey.cn/joke_feeds_interface.php', {
+      type: 2,
+      pageNum: this.data.pageNum
+    }).then((res) => {
+      this.setData({
+        picList: res
+      })
+    }).catch((error) => {
+      wx.showToast({
+        title: '接口请求失败：' + 'error',
+        icon: 'none'
+      })
     })
   },
 
   methods: {
-    show () {
+    show (event) {
       this.setData({
+        curPic: event.currentTarget.dataset.url,
         show: true
       })
     },
     hide () {
       this.setData({
         show: false
+      })
+    },
+    loadMore() {
+      if (this.data.isAll) return
+      this.setData({
+        pageNum: this.data.pageNum + 1
+      })
+      ajax('http://www.gamemonkey.cn/joke_feeds_interface.php', {
+        type: 2,
+        pageNum: this.data.pageNum
+      }).then((res) => {
+        if (this.data.picList.length === res.length) { // 没有更多数据
+          this.setData({
+            isAll: true
+          })
+          return
+        }
+        this.setData({
+          picList: res
+        })
+      }).catch((error) => {
+        wx.showToast({
+          title: '接口请求失败：' + 'error',
+          icon: 'none'
+        })
       })
     }
   }
