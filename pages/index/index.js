@@ -8,25 +8,48 @@ Page({
     sliderLeft: 0
   },
   onLoad: function () {
-    var that = this;
+    var that = this
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
           sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
           sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
-        });
+        })
       }
-    });
-  },
-  detail() {
-    wx.navigateTo({
-      url: '/pages/detail/detail',
     })
+    // 请求数据
+    // wx.request({
+    //   url: 'http://www.gamemonkey.cn/joke_feeds_interface.php',
+    //   data: {},
+    //   header: {
+    //     'content-type': 'application/json' // 默认值
+    //   },
+    //   success: function (res) {
+    //     console.log(res.data)
+    //   },
+    //   fail: function (error) {
+    //     console.log('请求失败：' + error)
+    //   }
+    // })
   },
   tabClick: function (e) {
     this.setData({
       sliderOffset: e.currentTarget.offsetLeft,
       activeIndex: e.currentTarget.id
-    });
+    })
+  },
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '开心一刻，不负好笑话',
+      path: 'https://v.qq.com',
+      imageUrl: 'http://www.fengdu100.com/uploads/allimg/180611/1R4394462-3.jpg'
+    }
+  },
+  onReachBottom () {
+    console.log('到底啦')
   }
-});
+})

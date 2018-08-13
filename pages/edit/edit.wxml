@@ -4,7 +4,12 @@
   <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__bd">
-        <input class="weui-input title" placeholder="请输入标题" />
+        <input 
+          class="weui-input title" 
+          value="{{ title }}" 
+          type="text" 
+          placeholder="请输入标题"
+          bindinput='changeTit'/>
       </view>
     </view>
   </view>
@@ -13,10 +18,16 @@
   <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell">
       <view class="weui-cell__bd">
-        <textarea class="weui-textarea content" placeholder="请输入内容" style="height: 3.3em" />
+        <textarea
+          value="{{ content }}"
+          class="weui-textarea content"
+          placeholder="请输入内容" 
+          style="height: 150px" 
+          maxlength="200"
+          bindinput='changeCon'/>
         <view class="weui-textarea-counter">0/200</view>
       </view>
     </view>
   </view>
-  <button class="weui-btn" type="primary" bindtap="showTopTips">发表</button>
+  <button class="weui-btn" type="primary" bindtap="publish">发表</button>
 </view>

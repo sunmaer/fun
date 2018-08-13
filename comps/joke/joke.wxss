@@ -2,18 +2,86 @@
 @import "../../css/font.wxss";
 
 .mod_joke {
+  padding-bottom: 50px;
   box-sizing: border-box;
   color: #222;
 }
 
 .joke_item {
-  display: flex;
-  flex-direction: row;
   padding: 10px 0;
-  height: 136px;
   border-bottom: 1px solid rgba(221, 221, 221, 0.6);
 }
 
-.joke_item .content-joke {
-  -webkit-line-clamp: 4;
+.item_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.title {
+  flex: 0 0 auto;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.content {
+  flex: auto;
+  line-height: 23px;
+  /* display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; */
+  font-size: 14px;
+}
+
+.info {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+}
+
+.avatar {
+  margin-right: 7px;
+  width: 20px;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.nick {
+  line-height: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+.comment {
+  margin-left: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+.like {
+  margin-left: 10px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+.item_cover {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
 }

@@ -1,21 +1,21 @@
 <!--pages/self/self.wxml-->
 <view class="mod_self">
   <view class="self_info">
-    <image class="avatar" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533985711325&di=6b0d6275bf6e2dacba3a2f820871af3b&imgtype=0&src=http%3A%2F%2Fupload.ellechina.com%2F2018%2F0730%2F1532956997833.jpg"></image>
+    <image class="avatar" src="{{ avatar }}"></image>
     <view class="text">
-      <text class="nick">安和桥北</text>
-      <text class="address">广东深圳</text>
+      <text class="nick">{{ nick }}</text>
+      <text class="address">{{ address }}</text>
     </view>
   </view>
   <view class="self_list">
-    <view class="item">
-      <text>关于</text>
+    <view class="item" bindtap='collect'>
+      <text>我的收藏</text>
     </view>
-    <view class="item">
-      <text>关于</text>
+    <view class="item" bindtap='publish'>
+      <text>我的发表</text>
     </view>
-    <view class="item">
-      <text>关于</text>
+    <view class="item" bindtap='about'>
+      <text>关于系统</text>
     </view>
   </view>
 </view>

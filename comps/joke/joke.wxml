@@ -1,17 +1,18 @@
 <!--pages/joke/joke.wxml-->
-<template name="joke">
-  <scroll-view class="mod_joke">
-    <view class="joke_item" bindtap='detail'>
-      <view class="item_content">
-        <text class="title">好笑的笑话哈哈哈哈哈哈哈哈哈哈啊哈哈</text>
-        <text class="content content-joke">高中时班主任姓黄，我们背地里叫他大黄。元旦时班里玩你比我猜，比赛到了白热化的阶段，最后一题是“藏獒”。 甲组的同学做了一个狗的姿势，最后一名同学高兴的指着班主任大喊：我知道了，我知道了，是大黄，是大黄……</text>
-        <view class="info">
-          <image class="avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0"></image>
-          <text class="nick">安和桥北</text>
-          <text class="iconfont icon-comment comment">250</text>
-          <text class="iconfont icon-like like">30</text>
-        </view>
-      </view>
+<scroll-view class="mod_joke">
+  <view 
+    class="joke_item" 
+    wx:for="{{ jokeList }}"
+    wx:key="{{ item.id }}">
+    <view class="item_content">
+      <text class="title">{{ item.title }}</text>
+      <view class="content">{{ item.content }}</view>
+      <!-- <view class="info">
+        <image class="avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0"></image>
+        <text class="nick">{{ item.time }}</text>
+        <text class="iconfont icon-comment comment">250</text>
+        <text class="iconfont icon-like like">30</text>
+      </view> -->
     </view>
-  </scroll-view>
-</template>
+  </view>
+</scroll-view>

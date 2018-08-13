@@ -1,66 +1,51 @@
-// pages/exit/exit.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    title: '',
+    content: ''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  changeTit (event) {
+    this.setData({
+      title: event.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  changeCon (event) {
+    this.setData({
+      content: event.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  publish () {
+    if(!this.data.title || !this.data.content) {
+      wx.showToast({
+        title: '发表失败，请填写完整',
+        icon: 'none'
+      })
+      return
+    }
+    let _this = this
+    // 请求数据
+    wx.request({
+      url: 'http://www.gamemonkey.cn/add_info.php?type=3',
+      data: {
+        title: this.data.title,
+        content: this.data.content
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        if (res && res.data && res.data.code === "200") {
+          wx.showToast({
+            title: '恭喜你，发表成功！',
+            icon: 'none'
+          })
+        }
+      },
+      fail: function (error) {
+        wx.showToast({
+          title: '接口请求失败' + 'error',
+          icon: 'none'
+        })
+      }
+    })
   }
 })

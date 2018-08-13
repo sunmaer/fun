@@ -1,1 +1,8 @@
-{}
+{
+  "usingComponents": {
+    "joke": "../../comps/joke/joke",
+    "gossip": "../../comps/gossip/gossip",
+    "picture": "../../comps/picture/picture"
+  },
+  "onReachButtomDistance": 50
+}
