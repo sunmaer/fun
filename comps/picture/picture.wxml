@@ -6,14 +6,14 @@
     class="picture_item"
     data-url="{{ item.content }}"
     bindtap='show'>
-    <image class="pic" mode="widthFix" src="{{ item.content }}"></image>
+    <image class="pic" mode="widthFix" src="{{ item.content }}" binderror='errImg'></image>
     <view class="tit">{{ item.title }}</view>
   </view>
 </scroll-view>
 <view class="mod_swiper" wx:if="{{ show }}" bindtap='hide'>
   <swiper style="width: 100%; height: 100%;">
     <swiper-item class="swiper_item">
-      <image mode="widthFix" src="{{ curPic }}" class="image" />
+      <image mode="widthFix" src="{{ curPic }}" class="image" binderror='errImg'/>
     </swiper-item>
   </swiper>
 </view>

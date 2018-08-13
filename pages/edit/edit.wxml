@@ -8,7 +8,7 @@
           class="weui-input title" 
           value="{{ title }}" 
           type="text" 
-          placeholder="请输入标题"
+          placeholder="请输入笑话标题"
           bindinput='changeTit'/>
       </view>
     </view>
@@ -21,7 +21,7 @@
         <textarea
           value="{{ content }}"
           class="weui-textarea content"
-          placeholder="请输入内容" 
+          placeholder="请输入笑话内容" 
           style="height: 150px" 
           maxlength="200"
           bindinput='changeCon'/>

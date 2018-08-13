@@ -63,5 +63,5 @@
 
 .image {
   margin-top: 51px;
-  width: 80%;
+  width: 100%;
 }

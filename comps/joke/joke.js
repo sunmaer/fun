@@ -2,6 +2,7 @@ const ajax = require('../../utils/util.js').ajax
 
 Component({
   properties: {},
+
   data: {
     jokeList: [],
     pageNum: 1,
@@ -22,6 +23,7 @@ Component({
       })
     })
   },
+  
   methods: {
     detail() {
       wx.navigateTo({

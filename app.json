@@ -20,15 +20,21 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "image/icon_home.png",
+        "selectedIconPath": "image/icon_home_cur.png"
       },
       {
         "pagePath": "pages/edit/edit",
-        "text": "讲笑话"
+        "text": "讲笑话",
+        "iconPath": "image/icon_smile.png",
+        "selectedIconPath": "image/icon_smile_cur.png"
       },
       {
         "pagePath": "pages/self/self",
-        "text": "个人中心"
+        "text": "个人中心",
+        "iconPath": "image/icon_user.png",
+        "selectedIconPath": "image/icon_user_cur.png"
       }
     ]
   }

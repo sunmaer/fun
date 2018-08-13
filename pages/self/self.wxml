@@ -9,13 +9,13 @@
   </view>
   <view class="self_list">
     <view class="item" bindtap='collect'>
-      <text>我的收藏</text>
+      <text class="iconfont icon-wodeshoucang"> 我的收藏</text>
     </view>
     <view class="item" bindtap='publish'>
-      <text>我的发表</text>
+      <text class="iconfont icon-bianji"> 我的发表</text>
     </view>
     <view class="item" bindtap='about'>
-      <text>关于系统</text>
+      <text class="iconfont icon-xitong"> 关于系统</text>
     </view>
   </view>
 </view>

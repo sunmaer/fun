@@ -1,4 +1,4 @@
 <!--pages/hello/hello.wxml-->
 <view class="mod_hello">
-  <text class="slogan">不负好笑话</text>
+  <text class="slogan">更多笑话等你来pick</text>
 </view>

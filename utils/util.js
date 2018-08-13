@@ -9,11 +9,6 @@ const formatTime = date => {
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
-}
-
 /** 
  * 数据请求
  * @param {string} url
@@ -42,7 +37,30 @@ const ajax = (url, data, method) => {
   })
 }
 
+/**
+ * 图片 URL 相对协议
+ * @param {string} url
+ * @return {string}
+ */
+const relativeHttp = (url) => {
+  // 图片不支持 https 协议
+  // return url ? url.replace(/^http\w*:\/\//g, '//') : ''
+  return url
+}
+
+/**
+ * 图片出错处理
+ * @param {object} event
+ * @param {string} url
+ * @return
+ */
+const errImgHandler = (event, url) => {
+  event.target.src = url
+}
+
 module.exports = {
   formatTime: formatTime,
-  ajax: ajax
+  ajax: ajax,
+  relativeHttp: relativeHttp,
+  errImgHandler: errImgHandler
 }
