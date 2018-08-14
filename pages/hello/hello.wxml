@@ -1,4 +1,5 @@
 <!--pages/hello/hello.wxml-->
 <view class="mod_hello">
-  <text class="slogan">更多笑话等你来pick</text>
+  <text class="iconfont icon-weixiao- emotion"></text>
+  <!-- <text class="slogan">更多笑话等你来pick</text> -->
 </view>

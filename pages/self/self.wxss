@@ -11,6 +11,7 @@
   flex: none;
   width: 60px;
   height: 60px;
+  border: 1px solid #fff;
 }
 
 .text {
@@ -23,7 +24,7 @@
 }
 
 .nick {
-  font-size: 13px;
+  font-size: 14px;
   color: #fff;
 }
 
@@ -37,4 +38,8 @@
   height: 50px;
   line-height: 50px;
   border-bottom: 1px solid rgba(221, 221, 221, 0.6);
+}
+
+.tit {
+  font-size: 14px;
 }

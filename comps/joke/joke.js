@@ -13,9 +13,11 @@ Component({
       type: 3,
       pageNum: this.data.pageNum
     }).then((res) => {
-      this.setData({
-        jokeList: res
-      })
+      if(res) {
+        this.setData({
+          jokeList: res
+        })
+      }
     }).catch((error) => {
       wx.showToast({
         title: '接口请求失败：' + 'error',
@@ -23,8 +25,25 @@ Component({
       })
     })
   },
-  
+
   methods: {
+    refresh () {
+      ajax('http://www.gamemonkey.cn/joke_feeds_interface.php', {
+        type: 3,
+        pageNum: this.data.pageNum
+      }).then((res) => {
+        if (res) {
+          this.setData({
+            jokeList: res
+          })
+        }
+      }).catch((error) => {
+        wx.showToast({
+          title: '接口请求失败：' + 'error',
+          icon: 'none'
+        })
+      })
+    },
     detail() {
       wx.navigateTo({
         url: '/pages/detail/detail',
@@ -40,15 +59,17 @@ Component({
         type: 3, 
         pageNum: this.data.pageNum
       }).then((res) => {
-        if(this.data.jokeList.length === res.length) { // 没有更多数据
+        if(res && this.data.jokeList.length === res.length) { // 没有更多数据
           this.setData({
             isAll: true
           })
           return
         }
-        this.setData({
-          jokeList: res
-        })
+        if(res) {
+          this.setData({
+            jokeList: res
+          })
+        }
       }).catch((error) => {
         wx.showToast({
           title: '接口请求失败：' + 'error',

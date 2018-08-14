@@ -11,3 +11,8 @@
 .weui-btn {
   background-color: #65c294 !important;
 }
+
+.weui-btn-dis {
+  margin-top: 20px;
+  background-color: #8ddbb4 !important;
+}

@@ -25,9 +25,9 @@
           style="height: 150px" 
           maxlength="200"
           bindinput='changeCon'/>
-        <view class="weui-textarea-counter">0/200</view>
+        <view class="weui-textarea-counter">{{ count }}/200</view>
       </view>
     </view>
   </view>
-  <button class="weui-btn" type="primary" bindtap="publish">发表</button>
+  <button class="{{ !disabled ? 'weui-btn' : 'weui-btn-dis' }}" type="primary" bindtap="publish">发表</button>
 </view>

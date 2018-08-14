@@ -1,3 +1,5 @@
+const getChina = require('../../utils/china.js').getChina
+
 Page({
   data: {
     avatar: '',
@@ -17,7 +19,7 @@ Page({
                 _this.setData({
                   avatar: res.userInfo.avatarUrl || '//puui.qpic.cn/vupload/0/common_avatar.png/0',
                   nick: res.userInfo.nickName || '微信用户',
-                  address: (res.userInfo.province + '' + res.userInfo.city) || '广东深圳'
+                  address: (getChina(res.userInfo.province.toLowerCase()) + '' + getChina(res.userInfo.city.toLowerCase())) || '广东深圳'
                 })
               }
             }

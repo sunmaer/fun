@@ -1,7 +1,9 @@
 Page({
   data: {
     title: '',
-    content: ''
+    content: '',
+    count: 0,
+    disabled: false
   },
   changeTit (event) {
     this.setData({
@@ -10,17 +12,22 @@ Page({
   },
   changeCon (event) {
     this.setData({
-      content: event.detail.value
+      content: event.detail.value,
+      count: event.detail.value.length <= 200 ? event.detail.value.length : 200
     })
   },
   publish () {
+    if(this.data.disabled) return
     if(!this.data.title || !this.data.content) {
       wx.showToast({
-        title: '发表失败，请填写完整',
+        title: '请填写完整内容',
         icon: 'none'
       })
       return
     }
+    this.setData({
+      disabled: true
+    })
     let _this = this
     // 请求数据
     wx.request({
@@ -37,6 +44,9 @@ Page({
           wx.showToast({
             title: '恭喜你，发表成功！',
             icon: 'none'
+          })
+          _this.setData({
+            disabled: false
           })
         }
       },

@@ -18,6 +18,9 @@ Page({
       }
     })
   },
+  onShow () {
+    this.selectComponent('#joke').refresh()
+  },
   tabClick: function (e) {
     this.setData({
       sliderOffset: e.currentTarget.offsetLeft,
